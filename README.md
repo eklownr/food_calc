@@ -19,5 +19,3 @@ Food calculator
 ![Food calc app](images/food_calc.png "Food calc app")
 
 ![Food calc app](images/food_calc2.png "Food calc app")
-
-![Food calc app](images/food_calc3.png "Food calc app")
