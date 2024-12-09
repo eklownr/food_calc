@@ -11,7 +11,7 @@ Food calculator
 ### Usage:
 ```bash
     rm json/all_food.json # Remove the old food database
-    python3 add_food.py # Set up your food database
+    python3 add_food_db.py # Set up your food database
     python3 main.py # Run the food app
 ```
 
