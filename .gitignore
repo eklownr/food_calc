@@ -1,0 +1,14 @@
+# Python generated files
+__pycache__/
+
+# VS Code files
+.vs/
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# Temporary files
+tmp/
+bak/
+._*
