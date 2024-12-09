@@ -5,7 +5,7 @@ Food calculator
 ```bash
     git clone https://github.com/eklownr/food_calc.git
     cd food_calc
-    pip install rich
+    pip install -r requirements.txt
     python3 main.py
 ```
 
