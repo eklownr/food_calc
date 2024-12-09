@@ -28,11 +28,11 @@ def ask_new_food():
     food_choice = 0
     # Ask for food-index to add
     while True:
-        food_choice = input("Choice food(index nr) from the list: ")
+        food_choice = input("Choose food(index nr) from the list: ")
         try :
             food_choice = int(food_choice)
             if food_choice >= len(all_food_list):
-                print(f"{food_choice} is not a valid number! Choice a number between 0 and {len(all_food_list) -1}")
+                print(f"{food_choice} is not a valid number! Choose a number between 0 and {len(all_food_list) -1}")
                 continue
             break
         except:
