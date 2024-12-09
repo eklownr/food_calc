@@ -58,7 +58,7 @@ def print_all_food(file):
         table.add_row(str(index), food_data['Mat'], str(food_data['Kcal']), str(food_data['Fett']), str(food_data['Kolhydrater']), str(food_data['Protein']))
         index += 1
 
-    # Print the table using rich console
+    # Print the table useing rich console
     print(table)
 
 
@@ -110,13 +110,12 @@ def print_date_file(file):
 
 
 def open_file(file_name):
-    ''' open file and returns data list as emty if not exist '''
+    ''' open file and returns data list as empty if not exist '''
     try:
         with open(file_name, 'r', encoding='utf-8') as f:
             data_list = json.load(f)
     except FileNotFoundError:
         data_list = []
-    #print(f"Open: {file_name}")
     return data_list
     
 
@@ -128,7 +127,7 @@ def write_file(file_name, data_list):
 
 
 def add_food(file_name, data_list):
-    ''' Add entrys to file and write to file'''
+    ''' Add entries to file and write to file'''
     while True:
         food = input("Enter food (or 'q' to quit): ")
         if food == 'q':
