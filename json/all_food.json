@@ -1,0 +1,166 @@
+[
+    {
+        "Mat": "Ett Ägg",
+        "Kcal": 88.83,
+        "Fett": 6.3,
+        "Kolhydrater": 0.252,
+        "Protein": 7.56
+    },
+    {
+        "Mat": "Ägg",
+        "Kcal": 141.0,
+        "Fett": 10.0,
+        "Kolhydrater": 0.4,
+        "Protein": 12.4
+    },
+    {
+        "Mat": "Blåbär",
+        "Kcal": 43.0,
+        "Fett": 0.5,
+        "Kolhydrater": 7.6,
+        "Protein": 1.5
+    },
+    {
+        "Mat": "Grädde",
+        "Kcal": 370.0,
+        "Fett": 40.0,
+        "Kolhydrater": 3.0,
+        "Protein": 2.0
+    },
+    {
+        "Mat": "Mjölk",
+        "Kcal": 70.0,
+        "Fett": 4.2,
+        "Kolhydrater": 4.6,
+        "Protein": 2.0
+    },
+    {
+        "Mat": "Yogurt",
+        "Kcal": 120.0,
+        "Fett": 10.0,
+        "Kolhydrater": 4.5,
+        "Protein": 3.2
+    },
+    {
+        "Mat": "Färskost",
+        "Kcal": 268.0,
+        "Fett": 26.0,
+        "Kolhydrater": 3.0,
+        "Protein": 26.0
+    },
+    {
+        "Mat": "Bacon",
+        "Amount": 1.4,
+        "Kcal": 260,
+        "Fett": 21,
+        "Kolhydrater": 0.1,
+        "Protein": 17
+    },
+    {
+        "Mat": "Hamburgare",
+        "Amount": 1.5,
+        "Kcal": 230,
+        "Fett": 17,
+        "Kolhydrater": 0,
+        "Protein": 19
+    },
+    {
+        "Mat": "Tomat",
+        "Amount": 0.5,
+        "Kcal": 18,
+        "Fett": 0.2,
+        "Kolhydrater": 3.9,
+        "Protein": 0.9
+    },
+    {
+        "Mat": "Paranöt",
+        "Kcal": 691.0,
+        "Fett": 16.0,
+        "Kolhydrater": 4.2,
+        "Protein": 14.0
+    },
+    {
+        "Mat": "Lök",
+        "Kcal": 39.0,
+        "Fett": 0.1,
+        "Kolhydrater": 7.3,
+        "Protein": 1.2
+    },
+    {
+        "Mat": "Lövbiff",
+        "Kcal": 110.0,
+        "Fett": 1.6,
+        "Kolhydrater": 0.0,
+        "Protein": 24.0
+    },
+    {
+        "Mat": "Olivolja",
+        "Kcal": 884.0,
+        "Fett": 100.0,
+        "Kolhydrater": 0.0,
+        "Protein": 0.0
+    },
+    {
+        "Mat": "Makrill i tomatsås",
+        "Kcal": 160.0,
+        "Fett": 11.0,
+        "Kolhydrater": 1.8,
+        "Protein": 13.0
+    },
+    {
+        "Mat": "Banan",
+        "Kcal": 101.0,
+        "Fett": 0.5,
+        "Kolhydrater": 22.0,
+        "Protein": 1.0
+    },
+    {
+        "Mat": "Avocado",
+        "Kcal": 160.0,
+        "Fett": 14.7,
+        "Kolhydrater": 8.3,
+        "Protein": 2.0
+    },
+    {
+        "Mat": "Pizza",
+        "Kcal": 280.0,
+        "Fett": 13.0,
+        "Kolhydrater": 27.0,
+        "Protein": 14.0
+    },
+    {
+        "Mat": "Bröd",
+        "Kcal": 285.0,
+        "Fett": 4.0,
+        "Kolhydrater": 50.0,
+        "Protein": 8.0
+    },
+    {
+        "Mat": "Ris",
+        "Kcal": 130.0,
+        "Fett": 0.6,
+        "Kolhydrater": 30.0,
+        "Protein": 3.0
+    },
+    {
+        "Mat": "Skinka",
+        "Kcal": 91.0,
+        "Fett": 11.0,
+        "Kolhydrater": 9.0,
+        "Protein": 41.0
+    },
+    {
+        "Mat": "Smör",
+        "Kcal": 730.0,
+        "Fett": 80.0,
+        "Kolhydrater": 0.3,
+        "Protein": 0.4
+    },
+    {
+        "Mat": "Starköl 5,6%",
+        "Kcal": 47.0,
+        "Fett": 0.0,
+        "Kolhydrater": 3.2,
+        "Protein": 0.6
+    }
+]

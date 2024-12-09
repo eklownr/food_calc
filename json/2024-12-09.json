@@ -1,0 +1,62 @@
+[
+    {
+        "Mat": "Ett Ägg",
+        "Kcal": 88.83,
+        "Fett": 6.3,
+        "Kolhydrater": 0.252,
+        "Protein": 7.56,
+        "Amount": 4.0,
+        "TotKcal": 355.32,
+        "TotCarbs": 1.008
+    },
+    {
+        "Mat": "Grädde",
+        "Kcal": 370.0,
+        "Fett": 40.0,
+        "Kolhydrater": 3.0,
+        "Protein": 2.0,
+        "Amount": 1.0,
+        "TotKcal": 370.0,
+        "TotCarbs": 3.0
+    },
+    {
+        "Mat": "Makrill i tomatsås",
+        "Kcal": 160.0,
+        "Fett": 11.0,
+        "Kolhydrater": 1.8,
+        "Protein": 13.0,
+        "Amount": 1.25,
+        "TotKcal": 200.0,
+        "TotCarbs": 2.25
+    },
+    {
+        "Mat": "Lök",
+        "Kcal": 39.0,
+        "Fett": 0.1,
+        "Kolhydrater": 7.3,
+        "Protein": 1.2,
+        "Amount": 1.0,
+        "TotKcal": 39.0,
+        "TotCarbs": 7.3
+    },
+    {
+        "Mat": "Lövbiff",
+        "Kcal": 110.0,
+        "Fett": 1.6,
+        "Kolhydrater": 0.0,
+        "Protein": 24.0,
+        "Amount": 2.13,
+        "TotKcal": 234.29999999999998,
+        "TotCarbs": 0.0
+    },
+    {
+        "Mat": "Bacon",
+        "Kcal": 260,
+        "Fett": 21,
+        "Kolhydrater": 0.1,
+        "Protein": 17,
+        "Amount": 1.4,
+        "TotKcal": 364.0,
+        "TotCarbs": 0.13999999999999999
+    }
+]
