@@ -4,7 +4,7 @@ from food_helper import  get_json_file, print_all_food, print_date_file, open_fi
 
 all_food = "json/all_food.json"
 
-# Ask user for filname
+# Ask user for a filname to store new data
 file_name = input("Choose your filename or hit Enter for todays date: ")
 if file_name == "":
     date =  datetime.date.today()
@@ -28,7 +28,7 @@ def ask_new_food():
     food_choice = 0
     # Ask for food-index to add
     while True:
-        food_choice = input("Choose food(index nr) from the list: ")
+        food_choice = input("Choose food (index nr) from the list: ")
         try :
             food_choice = int(food_choice)
             if food_choice >= len(all_food_list):
@@ -37,6 +37,7 @@ def ask_new_food():
             break
         except:
             print(f"{food_choice} is not a valid number!")
+
     # ask for amount of 100g food
     food_amount = 0
     while True:
@@ -54,16 +55,20 @@ def ask_new_food():
 
 
 ### add data to new_data_list ###
-while True:
-    answer = input("Hit Enter to continue or ( 'q' to quit): ")
-    if answer == 'q':
-        break
-    # print all food with index
-    print_all_food(all_food)
-    # ask to add more food or "q" to quit
-    ask_new_food()
+def main():
+    while True:
+        answer = input("Hit Enter to continue or ( 'q' to quit): ")
+        if answer == 'q':
+            break
+        # print all food with index
+        print_all_food(all_food)
+        # ask to add more food or "q" to quit
+        ask_new_food()
+    
+    # Write the file with the new data
+    _ = write_file(file_name, new_data_list)
+    # Print out the new file
+    print_date_file(file_name)
 
-# Write the file with the new data
-_ = write_file(file_name, new_data_list)
-# Print out the new file
-print_date_file(file_name)
+
+main()
