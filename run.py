@@ -16,9 +16,6 @@ print(f"Open : {file_name}")
 # Open new file {filename} returns data_list
 new_data_list = open_file(file_name)
 
-# print all food with index
-print_all_food(all_food)
-
 # Get all food data
 all_food_list = get_json_file(all_food)
 
@@ -55,7 +52,7 @@ def ask_new_food():
 
 
 ### add data to new_data_list ###
-def main():
+def add_food():
     while True:
         answer = input("Hit Enter to continue or ( 'q' to quit): ")
         if answer == 'q':
@@ -71,4 +68,7 @@ def main():
     print_date_file(file_name)
 
 
-main()
+if __name__ == "__main__":
+    # print all food with index
+    print_all_food(all_food)
+    add_food()
