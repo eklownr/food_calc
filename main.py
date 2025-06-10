@@ -7,8 +7,12 @@ from food_helper import smal_print_all_food, print_date_file
 from run import add_food
 from add_food_db import new_food
 
+
+# Start the app with background image
 subprocess.run(["/usr/bin/kitty", "icat", "meat.jpg"])
 
+
+''' main menu '''
 console = Console()
 def menu():
     with open("menu.md") as readme:
