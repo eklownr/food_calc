@@ -32,12 +32,14 @@ while run:
         # run food app
         add_food()
     elif answer == "k":
+        # TODO 
         print("Kcal % FAT: FAT * 9 / total_Kcal" )
         print("TODO add matplot funktion to print pie chart")
         import matplot2
     elif answer == "s":
         smal_print_all_food()
     elif answer == "a":
+        # TODO print 10 line and stop
         print_all_food("json/all_food.json")
     elif answer == "d":
         # open file to print to console
