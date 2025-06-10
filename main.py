@@ -29,6 +29,7 @@ while run:
         add_food()
     elif answer == "k":
         print("Kcal % FAT: FAT * 9 / total_Kcal" )
+        print("TODO add matplot funktion to print pie chart")
         import matplot2
     elif answer == "a":
         smal_print_all_food()
@@ -43,7 +44,7 @@ while run:
             except:
                 print(file, "do not exist")
     elif answer == "p":
-        # TODO print last week
+        # TODO print last week or print all pie chart image
         print_date_file("json/2025-06-09.json")
     elif answer == "n":
         # add new item/food to DB
