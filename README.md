@@ -1,5 +1,5 @@
 # food_calc
-Food calculator 
+Food calculator app for kitty terminal
 
 ### Installation:
 ```bash
@@ -10,8 +10,9 @@ Food calculator
 
 ### Usage:
 ```bash
+    kitty terminal
     python3 main.py # Run the food app
 ```
 
-## Python terminal food calc app.
+## Terminal food calc app.
 ![Food calc app](images/food_calc.png "Food calc app")
