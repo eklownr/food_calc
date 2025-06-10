@@ -2,12 +2,14 @@ import datetime
 from rich import print
 from food_helper import  get_json_file, print_all_food, print_date_file, open_file, write_file, add_new_line
 
-file_name = ""
+file_name = "" # file to open
 new_data_list = ""
+all_food = "json/all_food.json"
+
+# Get all food data
+all_food_list = get_json_file(all_food)
 
 def init():
-    all_food = "json/all_food.json"
-
     # Ask user for a filname to store new data
     global file_name 
     file_name = input("Choose your filename or hit Enter for todays date: ")
@@ -21,9 +23,6 @@ def init():
     # Open new file {filename} returns data_list
     global new_data_list 
     new_data_list = open_file(file_name)
-
-    # Get all food data
-    all_food_list = get_json_file(all_food)
 
 
 def ask_new_food():
