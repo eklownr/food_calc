@@ -1,9 +1,11 @@
 from rich import print
-from run import add_food
 from rich.console import Console
 from rich.markdown import Markdown
-from food_helper import smal_print_all_food, print_date_file
 import subprocess
+
+from food_helper import smal_print_all_food, print_date_file
+from run import add_food
+from add_food_db import new_food
 
 subprocess.run(["/usr/bin/kitty", "icat", "meat.jpg"])
 
@@ -23,10 +25,12 @@ while run:
     elif answer == "m":
         menu()
     elif answer == "r":
+        # run food app
         add_food()
     elif answer == "a":
         smal_print_all_food()
     elif answer == "w":
+        # open file to print to console
         file = input("file to open: ")
         if file == "":
             print_date_file("json/2025-06-09.json")
@@ -36,7 +40,11 @@ while run:
             except:
                 print(file, "do not exist")
     elif answer == "p":
+        # TODO print last week
         print_date_file("json/2025-06-09.json")
+    elif answer == "n":
+        # add new item/food to DB
+        new_food()
     elif answer == "j":
         subprocess.run(["/usr/bin/kitty", "icat", "meat.jpg"])
     else:
