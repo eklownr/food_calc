@@ -62,6 +62,32 @@ def print_all_food(file):
     print(table)
 
 
+def smal_print_all_food(file='json/all_food.json'):
+    ''' print all food with index '''
+    data_list = get_json_file(file)
+
+    # Create a table
+    table = Table(title="Food Data", show_lines=True)
+    
+    # Add columns to the table
+    table.add_column("Index", style="red")
+    table.add_column("Food", style="green")
+    table.add_column("Index", style="red")
+    table.add_column("Food", style="green")
+    table.add_column("Index", style="red")
+    table.add_column("Food", style="green")
+    
+    index = 0
+    food = {}
+    for food_data in data_list:
+        food.update({index: food_data['Mat']})
+        index += 1
+        #table.add_row(str(index), food_data['Mat'], str(index), food_data['Mat'], str(index), food_data['Mat'])
+
+    print(food)
+    #print(table)
+
+
 def show_command():
     print('All commands:')
     print(' "q" for quit')
