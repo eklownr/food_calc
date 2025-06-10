@@ -2,22 +2,28 @@ import datetime
 from rich import print
 from food_helper import  get_json_file, print_all_food, print_date_file, open_file, write_file, add_new_line
 
-all_food = "json/all_food.json"
+file_name = ""
+new_data_list = ""
 
-# Ask user for a filname to store new data
-file_name = input("Choose your filename or hit Enter for todays date: ")
-if file_name == "":
-    date =  datetime.date.today()
-    file_name = "json/" + str(date) + ".json"
+def init():
+    all_food = "json/all_food.json"
 
-# Show filname
-print(f"Open : {file_name}")
+    # Ask user for a filname to store new data
+    global file_name 
+    file_name = input("Choose your filename or hit Enter for todays date: ")
+    if file_name == "":
+        date =  datetime.date.today()
+        file_name = "json/" + str(date) + ".json"
 
-# Open new file {filename} returns data_list
-new_data_list = open_file(file_name)
+    # Show filname
+    print(f"Open : {file_name}")
 
-# Get all food data
-all_food_list = get_json_file(all_food)
+    # Open new file {filename} returns data_list
+    global new_data_list 
+    new_data_list = open_file(file_name)
+
+    # Get all food data
+    all_food_list = get_json_file(all_food)
 
 
 def ask_new_food():
@@ -53,6 +59,7 @@ def ask_new_food():
 
 ### add data to new_data_list ###
 def add_food():
+    init()
     while True:
         answer = input("Hit Enter to continue or ( 'q' to quit): ")
         if answer == 'q':
