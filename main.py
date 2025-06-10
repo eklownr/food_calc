@@ -29,6 +29,7 @@ while run:
         add_food()
     elif answer == "k":
         print("Kcal % FAT: FAT * 9 / total_Kcal" )
+        import matplot2
     elif answer == "a":
         smal_print_all_food()
     elif answer == "w":
