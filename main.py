@@ -3,7 +3,7 @@ from rich.console import Console
 from rich.markdown import Markdown
 import subprocess
 
-from food_helper import smal_print_all_food, print_date_file
+from food_helper import smal_print_all_food, print_date_file, print_all_food
 from run import add_food
 from add_food_db import new_food
 
@@ -35,9 +35,11 @@ while run:
         print("Kcal % FAT: FAT * 9 / total_Kcal" )
         print("TODO add matplot funktion to print pie chart")
         import matplot2
-    elif answer == "a":
+    elif answer == "s":
         smal_print_all_food()
-    elif answer == "w":
+    elif answer == "a":
+        print_all_food("json/all_food.json")
+    elif answer == "d":
         # open file to print to console
         file = input("file to open: ")
         if file == "":
