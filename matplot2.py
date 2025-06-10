@@ -1,5 +1,9 @@
 import matplotlib.pyplot as plt
 import subprocess
+import datetime
+date =  datetime.date.today()
+tile_name = "% of Kcal " + str(date) + "!"
+
 
 # Values for the pie chart
 values = [0.7, 0.2, 0.1]
@@ -27,7 +31,7 @@ for autotext in autotexts:
     autotext.set_weight('bold')
 
 # Title with white bold text
-plt.title('% of Kcal', color='white', weight='bold')
+plt.title(tile_name, color='white', weight='bold')
 
 # Save the pie chart to an image file
 plt.savefig('pie_chart.png', facecolor=fig.get_facecolor(), edgecolor='none')
