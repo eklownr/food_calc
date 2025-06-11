@@ -34,9 +34,6 @@ while run:
         # run food app
         add_food()
     elif answer == "k":
-        # TODO 
-        print("Kcal % FAT: FAT * 9 / total_Kcal" )
-        print("TODO add matplot funktion to print pie chart")
         make_pie()
     elif answer == "s":
         smal_print_all_food()

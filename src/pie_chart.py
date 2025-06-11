@@ -11,7 +11,6 @@ def make_pie():
 
 
     # Values for the pie chart
-    values = [0.7, 0.2, 0.1]
     values = get_pie_values()
 
     # Labels for the pie chart
@@ -47,15 +46,18 @@ def make_pie():
 
 
 def get_pie_values() -> list:
-    # try open file
-    file = "json/2025-06-11.json"
-    # calulate total kcal, fat, carbs, prot.
+    ''' open todays json-file, return Kcal % of Fat, Carbs and protein and print it out'''
+
+    # TODO try open file if exist, else return a fix value
+    file = "json/2025-06-08.json"
+
+    # get total Kcal, Fat, Carbs and Protein in gram
     v = get_kcal_values(file)
-    # return [list]
-    # print file values
+    # Calculate % of Kcal
     fat = v[1]*9/v[0]
     carbs =  v[2]*4/v[0]
     prot =  v[3]*4/v[0]
+
     print("values from file: ", file)
     print(f"Total g Kcal: [magenta]{v[0]:.2f}[/],   Fat: [yellow]{v[1]:.2f}[/]g,   Carbs: [green]{v[2]:.2f}[/]g,   Prot: [cyan]{v[3]:.2f}[/]g,")
     print(f"Total % Kcal: [magenta]{v[0]:.2f}[/],   Fat: [yellow]{fat*100:.2f}[/]%,   Carbs: [green]{carbs*100:.2f}[/]%,   Prot: [cyan]{prot*100:.2f}[/]%,")
