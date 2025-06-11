@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import subprocess
 import datetime
+from rich import print
 from src.food_helper import get_kcal_values
 
 def make_pie():
@@ -49,10 +50,14 @@ def get_pie_values() -> list:
     # try open file
     file = "json/2025-06-11.json"
     # calulate total kcal, fat, carbs, prot.
-    values = get_kcal_values(file)
+    v = get_kcal_values(file)
     # return [list]
     # print file values
-    #print(f"Total Kcal: [magenta]{totalKcal:.2f}[/],   Fat: [yellow]{totalFat:.2f}[/],   Carbs: [green]{totalCarbs:.2f}[/],   Prot: [cyan]{totalProt:.2f}[/],")
-    print(values)
+    fat = v[1]*9/v[0]
+    carbs =  v[2]*4/v[0]
+    prot =  v[3]*4/v[0]
+    print("values from file: ", file)
+    print(f"Total g Kcal: [magenta]{v[0]:.2f}[/],   Fat: [yellow]{v[1]:.2f}[/]g,   Carbs: [green]{v[2]:.2f}[/]g,   Prot: [cyan]{v[3]:.2f}[/]g,")
+    print(f"Total % Kcal: [magenta]{v[0]:.2f}[/],   Fat: [yellow]{fat*100:.2f}[/]%,   Carbs: [green]{carbs*100:.2f}[/]%,   Prot: [cyan]{prot*100:.2f}[/]%,")
 
-    return [0.5, 0.3, 0.2]
+    return [fat, carbs, prot]
