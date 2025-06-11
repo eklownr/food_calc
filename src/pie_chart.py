@@ -6,7 +6,7 @@ from src.food_helper import get_kcal_values
 
 def make_pie():
     date =  datetime.date.today()
-    tile_name = "% of Kcal " + str(date) + "!"
+    tile_name = "% of Kcal " + str(date) 
     img_name = "images/pie_chart_" + str(date) + ".png"
 
 
@@ -22,9 +22,11 @@ def make_pie():
     # Set the background color to black
     ax.set_facecolor('black')
     fig.patch.set_facecolor('black')
+    colors = ['darkorange', 'darkcyan', 'green']
 
-    # Create the pie chart with custom text properties
-    wedges, texts, autotexts = ax.pie(values, labels=labels, autopct='%1.1f%%', startangle=90)
+    # Create pie chart
+    wedges, texts, autotexts = ax.pie(values, labels=labels, autopct='%1.1f%%',
+                                  startangle=90, colors=colors)
 
     # Set the text color and font weight to white and bold
     for text in texts:
@@ -67,7 +69,7 @@ def get_pie_values() -> list:
     print(f"Total g Kcal: [magenta]{v[0]:.2f}[/],   Fat: [yellow]{v[1]:.2f}[/]g,   Carbs: [green]{v[2]:.2f}[/]g,   Prot: [cyan]{v[3]:.2f}[/]g,")
     print(f"Total % Kcal: [magenta]{v[0]:.2f}[/],   Fat: [yellow]{fat*100:.2f}[/]%,   Carbs: [green]{carbs*100:.2f}[/]%,   Prot: [cyan]{prot*100:.2f}[/]%,")
 
-    return [fat, carbs, prot]
+    return [fat, prot, carbs]
 
 
 def try_open_file(file) -> list:   
