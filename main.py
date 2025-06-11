@@ -6,6 +6,7 @@ import subprocess
 from food_helper import smal_print_all_food, print_date_file, print_all_food
 from run import add_food
 from add_food_db import new_food
+from pie_chart import make_pie
 
 
 # Start the app with background image
@@ -35,7 +36,7 @@ while run:
         # TODO 
         print("Kcal % FAT: FAT * 9 / total_Kcal" )
         print("TODO add matplot funktion to print pie chart")
-        import matplot2
+        make_pie()
     elif answer == "s":
         smal_print_all_food()
     elif answer == "a":
