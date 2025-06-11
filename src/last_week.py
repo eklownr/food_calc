@@ -1,5 +1,14 @@
 import os
 from food_helper import get_kcal_values
+from datetime import datetime, timedelta
+
+# Get today's date
+today = datetime.today().date()
+print("Today:", today)
+
+# Subtract 7 days
+seven_days_ago = today - timedelta(days=7)
+print("7 days ago:", seven_days_ago)
 
 path = '../json'
 json_files = [j for j in os.listdir(path) if j.endswith('.json') and j.startswith('2025')]
