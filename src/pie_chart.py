@@ -5,7 +5,7 @@ import datetime
 def make_pie():
     date =  datetime.date.today()
     tile_name = "% of Kcal " + str(date) + "!"
-    img_name = "pie_chart_" + str(date) + ".png"
+    img_name = "images/pie_chart_" + str(date) + ".png"
 
 
 

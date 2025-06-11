@@ -3,20 +3,21 @@ from rich.console import Console
 from rich.markdown import Markdown
 import subprocess
 
-from food_helper import smal_print_all_food, print_date_file, print_all_food
-from run import add_food
-from add_food_db import new_food
-from pie_chart import make_pie
+from src.food_helper import smal_print_all_food, print_date_file, print_all_food
+from src.run import add_food
+from src.add_food_db import new_food
+from src.pie_chart import make_pie
 
 
 # Start the app with background image
-subprocess.run(["/usr/bin/kitty", "icat", "meat.jpg"])
-
+def print_img():
+    subprocess.run(["/usr/bin/kitty", "icat", "images/meat.jpg"])
+print_img()
 
 ''' main menu '''
 console = Console()
 def menu():
-    with open("menu.md") as readme:
+    with open("src/menu.md") as readme:
         markdown = Markdown(readme.read())
     console.print(markdown)
 
@@ -59,6 +60,6 @@ while run:
         # add new item/food to DB
         new_food()
     elif answer == "j":
-        subprocess.run(["/usr/bin/kitty", "icat", "meat.jpg"])
+        print_img()
     else:
         print("wrong value: q - quit; m - menu")
