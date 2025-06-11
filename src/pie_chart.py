@@ -48,8 +48,13 @@ def make_pie():
 def get_pie_values() -> list:
     ''' open todays json-file, return Kcal % of Fat, Carbs and protein and print it out'''
 
-    # TODO try open file if exist, else return a fix value
-    file = "json/2025-06-08.json"
+    # try open file if exist, else return a fix value
+    date =  datetime.date.today()
+    file = "json/" + str(date) + ".json"
+    values = try_open_file(file)
+    if values != []:
+        print(file, ": Do not exist!")
+        return [0.5, 0.3, 0.2]
 
     # get total Kcal, Fat, Carbs and Protein in gram
     v = get_kcal_values(file)
@@ -63,3 +68,12 @@ def get_pie_values() -> list:
     print(f"Total % Kcal: [magenta]{v[0]:.2f}[/],   Fat: [yellow]{fat*100:.2f}[/]%,   Carbs: [green]{carbs*100:.2f}[/]%,   Prot: [cyan]{prot*100:.2f}[/]%,")
 
     return [fat, carbs, prot]
+
+
+def try_open_file(file) -> list:   
+    try:
+        with open(file, 'r', encoding='utf-8') as f:
+            values = []
+    except FileNotFoundError:
+        values = [0.7, 0.2, 0.1]
+    return values
