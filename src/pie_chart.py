@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import subprocess
 import datetime
+from src.food_helper import get_kcal_values
 
 def make_pie():
     date =  datetime.date.today()
@@ -8,9 +9,9 @@ def make_pie():
     img_name = "images/pie_chart_" + str(date) + ".png"
 
 
-
     # Values for the pie chart
     values = [0.7, 0.2, 0.1]
+    values = get_pie_values()
 
     # Labels for the pie chart
     labels = ['Fat', 'Protein', 'Carbs']
@@ -42,3 +43,16 @@ def make_pie():
 
     # Display the image in the kitty terminal
     subprocess.run(["/usr/bin/kitty", "icat", img_name])
+
+
+def get_pie_values() -> list:
+    # try open file
+    file = "json/2025-06-11.json"
+    # calulate total kcal, fat, carbs, prot.
+    values = get_kcal_values(file)
+    # return [list]
+    # print file values
+    #print(f"Total Kcal: [magenta]{totalKcal:.2f}[/],   Fat: [yellow]{totalFat:.2f}[/],   Carbs: [green]{totalCarbs:.2f}[/],   Prot: [cyan]{totalProt:.2f}[/],")
+    print(values)
+
+    return [0.5, 0.3, 0.2]

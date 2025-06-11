@@ -134,6 +134,26 @@ def print_date_file(file):
     print(f"Total Kcal: [magenta]{totalKcal:.2f}[/],   Fat: [yellow]{totalFat:.2f}[/],   Carbs: [green]{totalCarbs:.2f}[/],   Prot: [cyan]{totalProt:.2f}[/],")
 
 
+def get_kcal_values(file) -> list:
+    ''' print food table from date-json-file '''
+    data_file = file
+    data_list = get_json_file(data_file)
+    
+    # calculate total carbs, kcal, fat and protein
+    totalCarbs = 0
+    totalKcal = 0
+    totalFat = 0
+    totalProt = 0
+
+    # add rows to the table
+    for food_data in data_list:
+        totalCarbs += float(food_data['TotCarbs'])
+        totalKcal += float(food_data['TotKcal'])
+        totalFat += float(food_data['Fett']) * float(food_data['Amount'])
+        totalProt += float(food_data['Protein']) * float(food_data['Amount'])
+
+    return [totalKcal, totalFat, totalCarbs, totalProt]
+
 
 def open_file(file_name):
     ''' open file and returns data list as empty if not exist '''
