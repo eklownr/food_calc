@@ -1,4 +1,6 @@
 import json
+import sys
+import subprocess
 from rich.table import Table
 from rich import print
 
@@ -217,3 +219,11 @@ def add_new_line(new_data_list, choice, amount):
     
     new_data_list.append({'Mat': food, 'Kcal': kcal, 'Fett': fat, 'Kolhydrater': carbs, 'Protein': protein, 'Amount': amount, 'TotKcal': totkcal, 'TotCarbs': totcarbs})
     
+
+def print_img(img):
+    ''' Display the image in the kitty terminal '''
+    kitty_path = "/usr/bin/kitty"
+    if sys.platform == 'darwin': # macos
+        kitty_path = "/opt/homebrew/bin/kitty"
+
+    subprocess.run([kitty_path, "icat", img])

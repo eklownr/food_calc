@@ -1,9 +1,8 @@
 from rich import print
 from rich.console import Console
 from rich.markdown import Markdown
-import subprocess
 
-from src.food_helper import smal_print_all_food, print_date_file, print_all_food
+from src.food_helper import smal_print_all_food, print_date_file, print_all_food, print_img
 from src.run import add_food
 from src.add_food_db import new_food
 from src.pie_chart import make_pie
@@ -11,9 +10,7 @@ from src.last_month import get_this_month
 
 
 # Start the app with background image
-def print_img():
-    subprocess.run(["/usr/bin/kitty", "icat", "images/meat.jpg"])
-print_img()
+print_img("images/meat.jpg")
 
 ''' main menu '''
 console = Console()

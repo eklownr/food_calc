@@ -24,6 +24,6 @@ def get_this_month():
     for file in json_files:
         f = "json/" + file
         print_kcal_values(f)
-        print('[bold yellow]*************************[\]')
+        print('[bold yellow]*******************************************************************')
 
 

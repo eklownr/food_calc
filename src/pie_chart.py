@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import subprocess
 import datetime
 from rich import print
-from src.food_helper import get_kcal_values
+from src.food_helper import get_kcal_values, print_img
 
 def make_pie():
     date =  datetime.date.today()
@@ -44,7 +44,7 @@ def make_pie():
     plt.savefig(img_name, facecolor=fig.get_facecolor(), edgecolor='none')
 
     # Display the image in the kitty terminal
-    subprocess.run(["/usr/bin/kitty", "icat", img_name])
+    print_img(img_name)
 
 
 def get_pie_values() -> list:
