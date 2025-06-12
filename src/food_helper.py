@@ -155,6 +155,18 @@ def get_kcal_values(file) -> list:
     return [totalKcal, totalFat, totalCarbs, totalProt]
 
 
+def print_kcal_values(file):
+    v = get_kcal_values(file)
+    # Calculate % of Kcal
+    fat = v[1]*9/v[0]
+    carbs =  v[2]*4/v[0]
+    prot =  v[3]*4/v[0]
+
+    print("values from file: ", file)
+    print(f"Total g Kcal: [magenta]{v[0]:.2f}[/],   Fat: [yellow]{v[1]:.2f}[/]g,   Carbs: [green]{v[2]:.2f}[/]g,   Prot: [cyan]{v[3]:.2f}[/]g,")
+    print(f"Total % Kcal: [magenta]{v[0]:.2f}[/],   Fat: [yellow]{fat*100:.2f}[/]%,   Carbs: [green]{carbs*100:.2f}[/]%,   Prot: [cyan]{prot*100:.2f}[/]%,")
+
+
 def open_file(file_name):
     ''' open file and returns data list as empty if not exist '''
     try:
