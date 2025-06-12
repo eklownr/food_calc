@@ -54,6 +54,6 @@ while run:
         # add new item/food to DB
         new_food()
     elif answer == "j":
-        print_img()
+        print_img("images/meat.jpg")
     else:
         print("wrong value: q - quit; m - menu")
