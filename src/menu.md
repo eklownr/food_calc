@@ -7,6 +7,6 @@
 * s - print all_food Smal list
 * n - add new food to all_food_db.json
 * d - print file from date
-* p - print last week
+* l - print last month
 * j - print bg-meat-image
 ------

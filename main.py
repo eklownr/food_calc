@@ -7,6 +7,7 @@ from src.food_helper import smal_print_all_food, print_date_file, print_all_food
 from src.run import add_food
 from src.add_food_db import new_food
 from src.pie_chart import make_pie
+from src.last_month import get_this_month
 
 
 # Start the app with background image
@@ -50,9 +51,8 @@ while run:
                 print_date_file(file)
             except:
                 print(file, "do not exist")
-    elif answer == "p":
-        # TODO print last week or print all pie chart image
-        print_date_file("json/2025-06-09.json")
+    elif answer == "l":
+        get_this_month()
     elif answer == "n":
         # add new item/food to DB
         new_food()
