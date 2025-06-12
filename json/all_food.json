@@ -195,5 +195,12 @@
         "Fett": 11.0,
         "Kolhydrater": 1.8,
         "Protein": 13.0
+    },
+    {
+        "Mat": "Entrecote",
+        "Kcal": 165.0,
+        "Fett": 9.0,
+        "Kolhydrater": 0.0,
+        "Protein": 20.0
     }
 ]
